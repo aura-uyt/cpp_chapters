@@ -14,6 +14,6 @@ int main(){
     cout<<"Your total amount is: "<<SI;
     cout<<"\n";
 
-    cout<<"\n";
+    
     return 0;
 }
