@@ -9,7 +9,7 @@ int main(){
     cout<<"Enter the Time period(in yrs.): ";
     cin>>time;
 
-    SI=(amount*(rate+100)*time)/100;
+    SI=((amount*rate*time)/100)+amount;
 
     cout<<"Your total amount is: "<<SI;
     cout<<"\n";
