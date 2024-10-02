@@ -20,8 +20,8 @@ int main(){
     cout<<"  INVOICE:105\t\t\tDate: Sept 25, 2024\n";
     cout<<"  ITEM Name\t\t\tQty.  Rate    Amount\n";
     cout<<"  Pizza Large\t\t\t"<<pizza<<"     "<<a<<"     "<<x<<"\n";
-    cout<<"  Pasta      \t\t\t"<<pizza<<"     "<<b<<"     "<<y<<"\n";
-    cout<<"  Cheese     \t\t\t"<<pizza<<"     "<<c<<"      "<<z<<"\n";
+    cout<<"  Pasta      \t\t\t"<<pasta<<"     "<<b<<"     "<<y<<"\n";
+    cout<<"  Cheese      \t\t\t"<<cheese<<"     "<<c<<"      "<<z<<"\n";
 
     m=x+y+z; // total Amount
 

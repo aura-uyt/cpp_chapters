@@ -9,9 +9,9 @@ int main(){
     {
       p=x*i;
       cout<<p<<"\n";  /* code */
-      i++;
+      ++i;
     }
     
-    cout<<"\n";
+    // cout<<"\n";
     return 0;
 }
