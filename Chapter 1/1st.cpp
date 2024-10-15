@@ -3,9 +3,9 @@ using namespace std;
 
 int main()
 {
-    cout<<"Hello World";
+    cout<<"Hello World"<<endl;
     return 0;
 }
 
 
-// i uses github dark theme 
+// i uses Dark Magic theme, Frankestien 

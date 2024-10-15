@@ -7,13 +7,11 @@ int main(){
     cin>>n;
     cout<<endl;
     for (int i = 1; i <= n; i++)
-    {
-      cout<<(p=p*i) <<endl; 
-        // p=p*i;
+    {    
+      p=p*i;
     }
     
     cout<<"Factorial of "<<n<<" is: "<<p<<endl;
-
 
     return 0;
 }
