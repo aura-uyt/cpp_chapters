@@ -1,8 +1,45 @@
 #include <iostream>
+#include <string>
+#include <fstream>      // for FILE operations
 using namespace std;
 
+// Function to save the Username & Password to password.txt file
+void savedata( const string& user, const string& pass1)
+    {
+        ofstream file("password.txt", ios::app);
+        if (file.is_open())
+        {
+            file << user << " " << pass1 << endl;
+            file.close();
+            cout<< "Username & Password saved successfully!\n";
+        }
+        else
+        {
+            cout<<"Unable to open file :(\n";
+        }
+    }
+// Function to Retrive stored Username & Password
+void retrivedata()
+    {
+        ifstream file("password.txt");                                          // opens files for reading
+        if (file.is_open())
+        {
+            string user, pass1;
+            cout << "\nStored Usernames and Passwords:\n";
+            while (file >> user >> pass1)
+            {                                     // Read each username and password pair
+            cout << "Username: " << user << " | Password: " << pass1 << endl;
+            }
+            file.close();                                                           // Close the file after reading
+        } 
+        else
+        {
+            cout << "Error: Unable to open file to retrieve credentials." << endl;
+        }
+    }
+
 int main(){
-    int pass1, pass2, user, input;
+    string pass1, pass2, input, user;
     cout<<"\n\t>>> Welcome to Password Management System <<<"<<endl;
     cout<<"Enter your Username: ";
     cin>>user;
@@ -14,21 +51,25 @@ int main(){
     if (pass1 == pass2)
     {
         cout<<"Congratulations, you're Username and Password has been saved.";
+        savedata(user, pass1);
     }
     else{
         cout<<"ERROR: Enter the same Password in both fields.";
     }
 
     cout<<"\n.........................................................................................................................................\n";
-    cout<<"\nTo get all Your usernames & passwords enter the Master Password\n";
-    cin>> input;
-    int master = 96;
-    if ( input == master )
+    
+    // Optional: Retrieve and display stored credentials
+    cout << "\nEnter Master Password to retrieve credentials: ";
+    int masterPassword;
+    cin >> masterPassword;
+    if (masterPassword == 96)       // Simple master password check
+    {                               
+        retrivedata();              // Retrieve and show stored credentials
+    } 
+    else
     {
-        cout<< "username: " << user << " & password: " << pass1 <<endl;
-    }
-    else{
-        cout<<"WRONG MASTER PASS.  :(((\n";
+        cout << "Wrong Master Password." << endl;
     }
 
     cout<<endl;
