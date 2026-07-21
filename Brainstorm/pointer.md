@@ -5,6 +5,32 @@
 
 ---
 
+## C++ Learning Rules
+
+Primary Resource:
+
+- LearnCpp
+
+Reference:
+
+- cppreference
+
+Practice:
+
+- Striver A2Z
+- LeetCode
+
+Don't memorize STL.
+
+Whenever I write 10+ lines for a common operation,
+ask:
+
+"Does the STL already have a function for this?"
+
+If yes, learn it.
+
+---
+
 ## Why I'm Doing This
 
 I don't want to learn Computer Science only to get a job.
